@@ -1,0 +1,23 @@
+﻿Tammie Oh
+
+
+Data Structures HW 3: Explanation
+
+
+I worked with Jason Mittler, and received help from Luis, as well. I also used StackOverflow to look up a general expression for Punctuation marks.
+
+
+How I approached Autocorrect homework:
+I initially looked at the Trie, as a tree and saw each child node as a linked list, but that wasn’t working for me, conceptually. Therefore, I decided to look at the child nodes as an array list for the parent node.
+
+
+For the getChild() method, I knew that the method was going to be important in traversing through the Trie Tree. Therefore, I checked the current node’s children’s (the array list) and if that child node equalled the character I was looking for, it would return the child node.
+
+
+Insert method was the hardest method to implement for me. Initially, I had to create two cases where, if the current node’s children was null, to insert the method, and if it wasn’t null, then the current node would update and it would traverse through the list, until there were no characters left to insert. 
+
+
+For the search and remove method, it was mainly just traversing through the list and finding the characters that matched with the current node’s children. The other addition to check if the character’s valid was true or false. When removing a node, I had to set the last character’s valid to false so that the word can cease to exist.
+
+
+For wordListForWord, I needed to use the search method to see if the word existed in the list, and if it did, then I would return an empty array list. However, if the last character of the word was misspelled, I needed to add the correctly spelled words into an arraylist, so that it can recommend me certain words.
